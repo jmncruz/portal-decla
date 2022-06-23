@@ -4,7 +4,7 @@ Decla portal is a React front-end for Decla Tecnologia.
 
 ## Installation
 
-Use the package manager [pip](https://github.com/jmncruz/portal-decla.git) to install foobar.
+Use the package manager [GIT](https://github.com/jmncruz/portal-decla.git) to install Decla portal.
 
 ```bash
 git pull
@@ -12,7 +12,7 @@ git pull
 
 ## Usage
 
-```python
+```bash
 npm run dev
 
 # got to 'browser'
