@@ -6,8 +6,8 @@ export function SideDrawer(props: Action) {
 
     return (
 
-        <div className={props.isOpen == true ? "open p-6" : "close"}>
-            <h1 className=" text-black text-2xl font-bold">Clientes</h1>
+        <div className={props.isOpen == true ? "open p-6 h-screen overflow-y-auto" : "close"}>
+            <span className=" text-black text-3xl font-bold">Clientes</span>
         </div>
 
     )

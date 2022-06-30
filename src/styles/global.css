@@ -4,12 +4,10 @@
 
 body{
     @apply bg-zinc-100 text-zinc-800;
-    
-
 }
 @layer base{
     .open {
-        @apply w-96 text-white  border-r border-gray-200 ;
+        @apply w-96 text-white  border-r border-gray-200;
     }
     .close{
         @apply hidden;
