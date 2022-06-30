@@ -10,8 +10,6 @@ export function Home() {
     const [isOpen, setValue] = useState(false)
     const { param } = useParams<{ param: string }>()
 
-    console.log(param);
-
     return (
         <main className="flex min-h-screen">
             <Sidebar />

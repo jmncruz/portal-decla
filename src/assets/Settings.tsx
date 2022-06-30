@@ -1,11 +1,13 @@
+import { useParams } from "react-router-dom";
+
 export function Settings() {
+  const { param } = useParams<{ param: string }>()
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="25"
-      height="25"
+
       viewBox="0 0 24 24"
-      className="ml-2 mb-4"
+      className={ param == "settings" ? "p-2 w-10 h-10 rounded-lg bg-slate-200" : "p-2 w-10 h-10 rounded-lg "}
       fill="black"
     >
       <path
