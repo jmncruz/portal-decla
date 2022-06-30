@@ -7,7 +7,9 @@ Decla portal is a React front-end for Decla Tecnologia.
 Use the package manager [GIT](https://github.com/jmncruz/portal-decla.git) to install Decla portal.
 
 ```bash
+git fetch
 git pull
+npm install
 ```
 
 ## Usage
