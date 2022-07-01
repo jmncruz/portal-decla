@@ -3,10 +3,10 @@ export function DrawerClose() {
     <svg
       fill="none"
       aria-hidden="true"
-      className="rounded-full border-gray-200 border relative -left-4 bg-white"
+      className="rounded-full p-1 border-gray-200 border-2 absolute -ml-4 bg-white hover:bg-gray-100 active:border-gray-200"
       data-icon="gcms-icon"
       viewBox="0 0 24 24"
-      width="28"
+      width="30"
 
     >
       <path

@@ -16,6 +16,7 @@ export function Home() {
             <SideDrawer isOpen={isOpen} />
             {
                 param == "clients" ? <button
+                    data-tooltip-target="tooltip-default"
                     className="h-1 mt-20"
                     type="button"
                     onClick={() => {
@@ -23,7 +24,6 @@ export function Home() {
                     }}> {isOpen == false ? <DrawerClose /> : <DrawerOpen />}
                 </button> : ""
             }
-
             <Section />
         </main>
     )
