@@ -1,19 +1,24 @@
 import { useParams } from "react-router-dom";
-import { Banner } from "../assets/Banner";
+import { Dashboard } from "./Dashboard";
+import { Settings } from "./Settings";
 import { Table } from "./Table";
 
 export function Section() {
     const { param } = useParams<{ param: string }>()
+    const project = () => {
+        switch(param) {
+  
+          case "clients":   return <Table />;
+          case "settings":  return <Settings />
+
+  
+          default:    return <Dashboard />
+        }
+      }
     return (
         <section className="w-full">
             {
-                param == "settings" ?
-                    <div className="flex flex-col items-center">
-                        <Banner />
-                        <span className="text-2xl font-bold">Create your first model to get started</span>
-                        <button className="w-25 h-10 pr-5 pl-5 text-xs font-medium rounded text-white bg-indigo-600">+ Create Client</button>
-                    </div> :
-                    <Table />
+                project()       
             }
 
         </section>

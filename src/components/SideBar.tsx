@@ -1,22 +1,35 @@
-import { Link } from "react-router-dom";
-import { Logo } from "../assets/Logo";
-import { Settings } from "../assets/Settings";
-import { Users } from "../assets/Users";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
+library.add(fas)
+
+import { Link, useParams } from "react-router-dom";
+import { Logo } from "../assets/Logo";
 
 export function Sidebar() {
-
+    const { param } = useParams<{ param: string }>()
+    
     return (
-        <aside className="w-[65px] bg-white p-3 border-r border-gray-200">
-            <div>
-                <Logo />
+        <aside className="w-[65px] bg-white p-4 border-r border-gray-200">
+            <div className="h-4/5 w-full gap-4 text-center flex flex-col">
+                <div>
+                    <Link to={'/home'}>
+                        <Logo className="w-8 ml-1 mb-10 mt-4" />
+                    </Link>
+                </div>
+                
+
                 <Link to="/home/clients" >
-                    <Users />
+                    <FontAwesomeIcon icon={["fas", "briefcase"]} className={param == "clients" ? "text-emerald-500 bg-emerald-100 p-2 rounded" : "text-black p-2"}/>
                 </Link>
             </div>
-            <div className="absolute bottom-0 mb-4">
-                <Link to="/home/settings" >
-                    <Settings />
+            <div className="w-full flex flex-col-reverse h-1/5 gap-4 text-center">
+                <Link to="/home/user">
+                    <FontAwesomeIcon icon={["fas", "user"]}  className={param == "user" ? "text-emerald-500 bg-emerald-100 p-2 rounded" : "text-black p-2"} />
+                </Link>
+                <Link to="/home/settings">
+                    <FontAwesomeIcon icon={["fas", "gear"]}  className={param == "settings" ? "text-emerald-500 bg-emerald-100 p-2 rounded" : "text-black p-2"} />
                 </Link>
             </div>
         </aside>
