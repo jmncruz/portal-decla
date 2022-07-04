@@ -8,7 +8,7 @@ export function Section() {
     const project = () => {
         switch(param) {
   
-          case "clients":   return <Table />;
+          case "clients":   return <Table />
           case "settings":  return <Settings />
 
   
